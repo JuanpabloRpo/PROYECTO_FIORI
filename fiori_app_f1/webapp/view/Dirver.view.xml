@@ -17,16 +17,16 @@
                         <Select 
                             id="selectFiltro"
                             width="12rem"
-                            selectedKey="KIdPiloto"
+                            selectedKey="IdPiloto"
                             change=".onFiltroChange">
                             <items>
-                                <core:Item id="_IDGenItem1" key="KIdPiloto" text="Número"/>
-                                <core:Item id="_IDGenItem2" key="KNombre" text="Nombre"/>
-                                <core:Item id="_IDGenItem3" key="KApellido" text="Apellido"/>
-                                <core:Item id="_IDGenItem4" key="KEscuderia" text="Escuderia"/>
-                                <core:Item id="_IDGenItem5" key="KEdad" text="Edad"/>
-                                <core:Item id="_IDGenItem6" key="KDebut" text="Debut"/>
-                                <core:Item id="_IDGenItem7" key="KPuntos" text="Puntos"/>
+                                <core:Item id="_IDGenItem1" key="IdPiloto" text="Número"/>
+                                <core:Item id="_IDGenItem2" key="Nombre" text="Nombre"/>
+                                <core:Item id="_IDGenItem3" key="Apellidos" text="Apellido"/>
+                                <core:Item id="_IDGenItem4" key="Escuderia" text="Escuderia"/>
+                                <core:Item id="_IDGenItem5" key="Edad" text="Edad"/>
+                                <core:Item id="_IDGenItem6" key="Debut" text="Debut"/>
+                                <core:Item id="_IDGenItem7" key="Puntos" text="Puntos"/>
                             </items>
                         </Select>
 
