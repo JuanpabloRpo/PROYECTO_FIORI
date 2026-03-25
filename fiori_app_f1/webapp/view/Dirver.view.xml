@@ -26,7 +26,7 @@
                                 <core:Item id="_IDGenItem4" key="Escuderia" text="Escuderia"/>
                                 <core:Item id="_IDGenItem5" key="Edad" text="Edad"/>
                                 <core:Item id="_IDGenItem6" key="Debut" text="Debut"/>
-                                <core:Item id="_IDGenItem7" key="Puntos" text="Puntos"/>
+                                <core:Item id="_IDGenItem7" key="Puntostotales" text="Puntos"/>
                             </items>
                         </Select>
 
