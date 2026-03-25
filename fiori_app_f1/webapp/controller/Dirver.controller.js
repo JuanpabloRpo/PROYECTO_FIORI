@@ -10,6 +10,37 @@ sap.ui.define([
         onInit() {
             this._sLastSortField = "";
             this._bSortDescending = false;
+
+            this._mSortButtons = {
+                IdPiloto: {
+                    id: "btnSortIdPiloto",
+                    text: "Número"
+                },
+                Nombre: {
+                    id: "btnSortNombre",
+                    text: "Nombre"
+                },
+                Apellidos: {
+                    id: "btnSortApellidos",
+                    text: "Apellido"
+                },
+                Edad: {
+                    id: "btnSortEdad",
+                    text: "Edad"
+                },
+                Debut: {
+                    id: "btnSortDebut",
+                    text: "Año debut"
+                },
+                Escuderia: {
+                    id: "btnSortEscuderia",
+                    text: "Escuderia"
+                },
+                Puntostotales: {
+                    id: "btnSortPuntos",
+                    text: "Puntos totales"
+                }
+            };
         },
 
         onFiltroChange: function(){
@@ -52,6 +83,12 @@ sap.ui.define([
             var oSorter = new Sorter(sCampo, this._bSortDescending);
             oBinding.sort(oSorter);
 
+            this._actualizarIndicadorOrden();
+
+        },
+
+        _actualizarIndicadorOrden: function(){
+            var sFlecha = this._bSortDescending ? " ↓" : " ↑";
         }
 
     });

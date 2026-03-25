@@ -43,7 +43,7 @@
                 <columns>
                     <Column id="_IDGenColumn1" >
                         <header>
-                            <Button id="_IDGenButton" 
+                            <Button id="btnSortIdPiloto" 
                                 text="Número"
                                 type="Transparent"
                                 press=".onSortColumn">
@@ -55,7 +55,7 @@
                     </Column>
                     <Column id="_IDGenColumn2" >
                         <header>
-                            <Button id="_IDGenButton2" 
+                            <Button id="btnSortNombre" 
                                 text="Nombre"
                                 type="Transparent"
                                 press=".onSortColumn">
@@ -67,7 +67,7 @@
                     </Column>
                     <Column id="_IDGenColumn3" >
                         <header>
-                            <Button id="_IDGenButton3" 
+                            <Button id="btnSortApellido" 
                                 text="Apellido"
                                 type="Transparent"
                                 press=".onSortColumn">
@@ -79,7 +79,7 @@
                     </Column>
                     <Column id="_IDGenColumn4" >
                         <header>
-                            <Button id="_IDGenButton4" 
+                            <Button id="btnSortEdad" 
                                 text="Edad"
                                 type="Transparent"
                                 press=".onSortColumn">
@@ -91,7 +91,7 @@
                     </Column>
                     <Column id="_IDGenColumn5" >
                         <header>
-                            <Button id="_IDGenButton5" 
+                            <Button id="btnSortDebut" 
                                 text="Año debut"
                                 type="Transparent"
                                 press=".onSortColumn">
@@ -103,7 +103,7 @@
                     </Column>
                     <Column id="_IDGenColumn6" >
                         <header>
-                            <Button id="_IDGenButton6" 
+                            <Button id="btnSortEscuderia" 
                                 text="Escuderia"
                                 type="Transparent"
                                 press=".onSortColumn">
@@ -115,7 +115,7 @@
                     </Column>
                     <Column id="_IDGenColumn7" >
                         <header>
-                            <Button id="_IDGenButton7" 
+                            <Button id="btnSortPuntos" 
                                 text="Puntos totales"
                                 type="Transparent"
                                 press=".onSortColumn">
