@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.consapiens.fiori.f1.fioriappf1.controller.Dirver"
+<mvc:View xmlns:core="sap.ui.core" controllerName="com.consapiens.fiori.f1.fioriappf1.controller.Dirver"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
@@ -11,7 +11,32 @@
 
                 <headerToolbar>
                     <Toolbar id="_IDGenToolbar" >
-                        <Title id="_IDGenTitle" text="Pilotos"/>
+                        <Title id="_IDGenTitle" text="Listado de Pilotos de Formula 1"/>
+                        <ToolbarSpacer id="_IDGenToolbarSpacer" />
+                        <Label id="_IDGenLabel" text="Filtrar por: "/>
+                        <Select 
+                            id="selectFiltro"
+                            width="12rem"
+                            selectedKey="KIdPiloto"
+                            change=".onFiltroChange">
+                            <items>
+                                <core:Item id="_IDGenItem1" key="KIdPiloto" text="Número"/>
+                                <core:Item id="_IDGenItem2" key="KNombre" text="Nombre"/>
+                                <core:Item id="_IDGenItem3" key="KApellido" text="Apellido"/>
+                                <core:Item id="_IDGenItem4" key="KEscuderia" text="Escuderia"/>
+                                <core:Item id="_IDGenItem5" key="KEdad" text="Edad"/>
+                                <core:Item id="_IDGenItem6" key="KDebut" text="Debut"/>
+                                <core:Item id="_IDGenItem7" key="KPuntos" text="Puntos"/>
+                            </items>
+                        </Select>
+
+                        <SearchField 
+                            id="searchFiltro"
+                            width="16rem"
+                            placeholder="Escriber el valor a buscar"
+                            search=".onFiltroChange"
+                            liveChange=".onFiltroChange"
+                        />
                     </Toolbar>
                 </headerToolbar>
 
