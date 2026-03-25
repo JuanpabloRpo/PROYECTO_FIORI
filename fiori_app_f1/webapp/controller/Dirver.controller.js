@@ -1,12 +1,25 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
-], (Controller, Filter, FilterOperator) => {
+    "sap/ui/model/FilterOperator",
+    "sap/ui/model/Sorter"
+], (Controller, Filter, FilterOperator, Sorter) => {
     "use strict";
 
     return Controller.extend("com.consapiens.fiori.f1.fioriappf1.controller.Dirver", {
         onInit() {
+            this._sLastSortField = "";
+            this._bSortDescending = false;
+
+            this._mSortButtons = {
+                IdPiloto: "btnSortIdPiloto",
+                Nombre: "btnSortNombre",
+                Apellidos: "btnSortApellido",
+                Edad: "btnSortEdad",
+                Debut: "btnSortDebut",
+                Escuderia: "btnSortEscuderia",
+                Puntostotales: "btnSortPuntos"
+            };
         },
 
         onFiltroChange: function(){
@@ -30,6 +43,55 @@ sap.ui.define([
             }
 
             oBinding.filter(aFilters);
+        },
+
+        onSortColumn: function(oEvent){
+            var oButton = oEvent.getSource();
+            var sCampo = oButton.data("sortField");
+
+            var oTable = this.byId("tbl_pilotos");
+            var oBinding = oTable.getBinding("items");
+
+            if(this._sLastSortField === sCampo){
+                this._bSortDescending = !this._bSortDescending;
+            }else{
+                this._sLastSortField = sCampo;
+                this._bSortDescending = false;
+            }
+
+            var oSorter = new Sorter(sCampo, this._bSortDescending);
+            oBinding.sort(oSorter);
+
+            this._actualizarIconsOrden();
+
+        },
+
+        _actualizarIconsOrden: function(){
+            var sIcono = this._bSortDescending ?
+            "sap-icon://slim-arrow-down"
+            : "sap-icon://slim-arrow-up";
+
+            var sTooltip = this._bSortDescending
+            ? "Ordenado descendente"
+            : "ordenado ascendente";
+
+            Object.keys(this._mSortButtons).forEach(function (sCampo) {
+                var oButton = this.byId(this._mSortButtons[sCampo]);
+                if(oButton) {
+                    oButton.setIcon("");
+                    oButton.setTooltip("");
+                }
+            }.bind(this));
+
+            if(this._sLastSortField && this._mSortButtons[this._sLastSortField]) {
+                var oActiveButton = this.byId(this._mSortButtons[this._sLastSortField]);
+
+                if(oActiveButton){
+                    oActiveButton.setIcon(sIcono);
+                    oActiveButton.setTooltip(sTooltip);
+                }
+            }
         }
+
     });
 });

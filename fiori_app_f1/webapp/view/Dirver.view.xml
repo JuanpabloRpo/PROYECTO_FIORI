@@ -33,7 +33,7 @@
                         <SearchField 
                             id="searchFiltro"
                             width="16rem"
-                            placeholder="Escriber el valor a buscar"
+                            placeholder="Escribir el valor a buscar"
                             search=".onFiltroChange"
                             liveChange=".onFiltroChange"
                         />
@@ -42,25 +42,102 @@
 
                 <columns>
                     <Column id="_IDGenColumn1" >
-                        <Text id="_IDGenText" text="Número"/>
+                        <header>
+                            <Button id="btnSortIdPiloto" 
+                                text="Número"
+                                type="Transparent"
+                                icon=""
+                                iconFirst="false"
+                                press=".onSortColumn">
+                                <customData>
+                                    <core:CustomData key="sortField" value="IdPiloto"/>
+                                </customData>
+                            </Button>
+                        </header>
                     </Column>
                     <Column id="_IDGenColumn2" >
-                        <Text id="_IDGenText1" text="Nombre"/>
+                        <header>
+                            <Button id="btnSortNombre" 
+                                text="Nombre"
+                                type="Transparent"
+                                icon=""
+                                iconFirst="false"
+                                press=".onSortColumn">
+                                <customData>
+                                    <core:CustomData key="sortField" value="Nombre"/>
+                                </customData>
+                            </Button>
+                        </header>
                     </Column>
                     <Column id="_IDGenColumn3" >
-                        <Text id="_IDGenText2" text="Apellido"/>
+                        <header>
+                            <Button id="btnSortApellido" 
+                                text="Apellido"
+                                type="Transparent"
+                                icon=""
+                                iconFirst="false"
+                                press=".onSortColumn">
+                                <customData>
+                                    <core:CustomData key="sortField" value="Apellidos"/>
+                                </customData>
+                            </Button>
+                        </header>
                     </Column>
                     <Column id="_IDGenColumn4" >
-                        <Text id="_IDGenText3" text="Edad"/>
+                        <header>
+                            <Button id="btnSortEdad" 
+                                text="Edad"
+                                type="Transparent"
+                                icon=""
+                                iconFirst="false"
+                                press=".onSortColumn">
+                                <customData>
+                                    <core:CustomData key="sortField" value="Edad"/>
+                                </customData>
+                            </Button>
+                        </header>
                     </Column>
                     <Column id="_IDGenColumn5" >
-                        <Text id="_IDGenText4" text="Año debut"/>
+                        <header>
+                            <Button id="btnSortDebut" 
+                                text="Año debut"
+                                type="Transparent"
+                                icon=""
+                                iconFirst="false"
+                                press=".onSortColumn">
+                                <customData>
+                                    <core:CustomData key="sortField" value="Debut"/>
+                                </customData>
+                            </Button>
+                        </header>
                     </Column>
                     <Column id="_IDGenColumn6" >
-                        <Text id="_IDGenText5" text="Escuderia"/>
+                        <header>
+                            <Button id="btnSortEscuderia" 
+                                text="Escuderia"
+                                type="Transparent"
+                                icon=""
+                                iconFirst="false"
+                                press=".onSortColumn">
+                                <customData>
+                                    <core:CustomData key="sortField" value="Escuderia"/>
+                                </customData>
+                            </Button>
+                        </header>
                     </Column>
                     <Column id="_IDGenColumn7" >
-                        <Text id="_IDGenText6" text="Puntos totales"/>
+                        <header>
+                            <Button id="btnSortPuntos" 
+                                text="Puntos totales"
+                                type="Transparent"
+                                icon=""
+                                iconFirst="false"
+                                press=".onSortColumn">
+                                <customData>
+                                    <core:CustomData key="sortField" value="Puntostotales"/>
+                                </customData>
+                            </Button>
+                        </header>
                     </Column>
                 </columns>
 
