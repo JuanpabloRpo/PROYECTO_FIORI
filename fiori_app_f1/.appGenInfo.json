@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Mar 25 2026 09:03:22 GMT-0500 (Colombia Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://my410287.payroll.sapsf.com/sap/opu/odata/sap/Y_ODATA_F1_SRV",
+    "appName": "fiori_app_f1",
+    "appTitle": "Aplicación Fiori F1",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "com.consapiens.fiori.f1",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.146.0",
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.21.0",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

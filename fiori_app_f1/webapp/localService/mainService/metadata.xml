@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Y_ODATA_F1_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Driver" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IdPiloto"/>
+                </Key>
+                <Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IdPiloto" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Id Piloto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nombre Piloto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Apellidos" Type="Edm.String" Nullable="false" MaxLength="70" sap:unicode="false" sap:label="Apellidos del piloto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Edad" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Edad del piloto" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Debut" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Debut" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Escuderia" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Escuderia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Puntostotales" Type="Edm.Decimal" Nullable="false" Precision="6" Scale="1" sap:unicode="false" sap:label="Puntos Totales" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="Y_ODATA_F1_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="DriverSet" EntityType="Y_ODATA_F1_SRV.Driver" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://MY410287.PAYROLL.SAPSF.COM:443/sap/opu/odata/sap/Y_ODATA_F1_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://MY410287.PAYROLL.SAPSF.COM:443/sap/opu/odata/sap/Y_ODATA_F1_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
