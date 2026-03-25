@@ -12,34 +12,13 @@ sap.ui.define([
             this._bSortDescending = false;
 
             this._mSortButtons = {
-                IdPiloto: {
-                    id: "btnSortIdPiloto",
-                    text: "Número"
-                },
-                Nombre: {
-                    id: "btnSortNombre",
-                    text: "Nombre"
-                },
-                Apellidos: {
-                    id: "btnSortApellidos",
-                    text: "Apellido"
-                },
-                Edad: {
-                    id: "btnSortEdad",
-                    text: "Edad"
-                },
-                Debut: {
-                    id: "btnSortDebut",
-                    text: "Año debut"
-                },
-                Escuderia: {
-                    id: "btnSortEscuderia",
-                    text: "Escuderia"
-                },
-                Puntostotales: {
-                    id: "btnSortPuntos",
-                    text: "Puntos totales"
-                }
+                IdPiloto: "btnSortIdPiloto",
+                Nombre: "btnSortNombre",
+                Apellidos: "btnSortApellido",
+                Edad: "btnSortEdad",
+                Debut: "btnSortDebut",
+                Escuderia: "btnSortEscuderia",
+                Puntostotales: "btnSortPuntos"
             };
         },
 
@@ -83,12 +62,35 @@ sap.ui.define([
             var oSorter = new Sorter(sCampo, this._bSortDescending);
             oBinding.sort(oSorter);
 
-            this._actualizarIndicadorOrden();
+            this._actualizarIconsOrden();
 
         },
 
-        _actualizarIndicadorOrden: function(){
-            var sFlecha = this._bSortDescending ? " ↓" : " ↑";
+        _actualizarIconsOrden: function(){
+            var sIcono = this._bSortDescending ?
+            "sap-icon://slim-arrow-down"
+            : "sap-icon://slim-arrow-up";
+
+            var sTooltip = this._bSortDescending
+            ? "Ordenado descendente"
+            : "ordenado ascendente";
+
+            Object.keys(this._mSortButtons).forEach(function (sCampo) {
+                var oButton = this.byId(this._mSortButtons[sCampo]);
+                if(oButton) {
+                    oButton.setIcon("");
+                    oButton.setTooltip("");
+                }
+            }.bind(this));
+
+            if(this._sLastSortField && this._mSortButtons[this._sLastSortField]) {
+                var oActiveButton = this.byId(this._mSortButtons[this._sLastSortField]);
+
+                if(oActiveButton){
+                    oActiveButton.setIcon(sIcono);
+                    oActiveButton.setTooltip(sTooltip);
+                }
+            }
         }
 
     });

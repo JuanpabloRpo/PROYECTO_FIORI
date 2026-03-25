@@ -46,6 +46,8 @@
                             <Button id="btnSortIdPiloto" 
                                 text="Número"
                                 type="Transparent"
+                                icon=""
+                                iconFirst="false"
                                 press=".onSortColumn">
                                 <customData>
                                     <core:CustomData key="sortField" value="IdPiloto"/>
@@ -58,6 +60,8 @@
                             <Button id="btnSortNombre" 
                                 text="Nombre"
                                 type="Transparent"
+                                icon=""
+                                iconFirst="false"
                                 press=".onSortColumn">
                                 <customData>
                                     <core:CustomData key="sortField" value="Nombre"/>
@@ -70,6 +74,8 @@
                             <Button id="btnSortApellido" 
                                 text="Apellido"
                                 type="Transparent"
+                                icon=""
+                                iconFirst="false"
                                 press=".onSortColumn">
                                 <customData>
                                     <core:CustomData key="sortField" value="Apellidos"/>
@@ -82,6 +88,8 @@
                             <Button id="btnSortEdad" 
                                 text="Edad"
                                 type="Transparent"
+                                icon=""
+                                iconFirst="false"
                                 press=".onSortColumn">
                                 <customData>
                                     <core:CustomData key="sortField" value="Edad"/>
@@ -94,6 +102,8 @@
                             <Button id="btnSortDebut" 
                                 text="Año debut"
                                 type="Transparent"
+                                icon=""
+                                iconFirst="false"
                                 press=".onSortColumn">
                                 <customData>
                                     <core:CustomData key="sortField" value="Debut"/>
@@ -106,6 +116,8 @@
                             <Button id="btnSortEscuderia" 
                                 text="Escuderia"
                                 type="Transparent"
+                                icon=""
+                                iconFirst="false"
                                 press=".onSortColumn">
                                 <customData>
                                     <core:CustomData key="sortField" value="Escuderia"/>
@@ -118,6 +130,8 @@
                             <Button id="btnSortPuntos" 
                                 text="Puntos totales"
                                 type="Transparent"
+                                icon=""
+                                iconFirst="false"
                                 press=".onSortColumn">
                                 <customData>
                                     <core:CustomData key="sortField" value="Puntostotales"/>
