@@ -2,5 +2,57 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <content>
+            <Table 
+                id="tbl_pilotos"
+                inset="false"
+                items="{ 
+                path: '/DriverSet' }">
+
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar" >
+                        <Title id="_IDGenTitle" text="Pilotos"/>
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="_IDGenColumn1" >
+                        <Text id="_IDGenText" text="Número"/>
+                    </Column>
+                    <Column id="_IDGenColumn2" >
+                        <Text id="_IDGenText1" text="Nombre"/>
+                    </Column>
+                    <Column id="_IDGenColumn3" >
+                        <Text id="_IDGenText2" text="Apellido"/>
+                    </Column>
+                    <Column id="_IDGenColumn4" >
+                        <Text id="_IDGenText3" text="Edad"/>
+                    </Column>
+                    <Column id="_IDGenColumn5" >
+                        <Text id="_IDGenText4" text="Año debut"/>
+                    </Column>
+                    <Column id="_IDGenColumn6" >
+                        <Text id="_IDGenText5" text="Escuderia"/>
+                    </Column>
+                    <Column id="_IDGenColumn7" >
+                        <Text id="_IDGenText6" text="Puntos totales"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1" >
+                        <cells>
+                            <Text id="_IDGenText7" text="{IdPiloto}"/>
+                            <Text id="_IDGenText8" text="{Nombre}"/>
+                            <Text id="_IDGenText9" text="{Apellidos}"/>
+                            <Text id="_IDGenText10" text="{Edad}"/>
+                            <Text id="_IDGenText11" text="{Debut}"/>
+                            <Text id="_IDGenText12" text="{Escuderia}"/>
+                            <Text id="_IDGenText13" text="{Puntostotales}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>
