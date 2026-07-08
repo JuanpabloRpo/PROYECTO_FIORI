@@ -4,7 +4,7 @@
     <Page id="page" title="{i18n>title}">
         <content>
             <Table 
-                id="tbl_pilotos"
+                id="tbl_pilotos "
                 inset="false"
                 items="{ 
                 path: '/DriverSet' }">
